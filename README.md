@@ -56,8 +56,9 @@ repositorio. El mismo flujo se aplica a `task_1`, `task_2`, `task_3` y
 `task_5`. Usa `npm ci` para conservar las versiones del lock y ejecuta un
 servidor de desarrollo a la vez, ya que comparten el puerto 8080.
 
-`task_4` tiene un procedimiento provisional de compilación y ejecución,
-explicado en el [README de TypeScript](./TypeScript/README.md#ejecución-provisional-de-task_4).
+`task_4` dispone de `npm ci`, `npm run typecheck` y `npm run build` con
+TypeScript 4.9.5 y el compilador local de namespaces, explicados en el
+[README de TypeScript](./TypeScript/README.md#instalación-y-ejecución-de-task_4).
 
 ## Estado y validación
 
@@ -66,11 +67,10 @@ Webpack, lint y siete comprobaciones de comportamiento y contratos de tipos.
 Los resultados y las versiones de las herramientas están en la
 [documentación del módulo](./TypeScript/README.md#verificación-local).
 
-La configuración actual de la **tarea 9** y la confirmación de que la edición
-del módulo termina en la tarea 11 siguen pendientes. Por ello, `task_4`
-incluye una utilidad auxiliar de compilación, pero todavía no su
-`package.json` definitivo. Las verificaciones locales no sustituyen el
-checker privado de Holberton.
+El usuario confirmó que la **tarea 9** exige `package.json` sin proporcionar
+su contenido. `task_4` incluye ahora una configuración local mínima y su lock,
+sin presentarlos como archivos oficiales. El alcance auditado es 0–11; las
+verificaciones locales no sustituyen el checker privado de Holberton.
 
 ## Mantenimiento
 

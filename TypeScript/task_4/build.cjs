@@ -1,4 +1,4 @@
-// Local build while the current task_4/package.json is awaiting confirmation.
+// Local namespace build used by task_4/package.json.
 const fs = require('node:fs');
 const path = require('node:path');
 

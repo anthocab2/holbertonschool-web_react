@@ -1,0 +1,12 @@
+{
+  "name": "task_4",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build": "node build.cjs"
+  },
+  "devDependencies": {
+    "typescript": "4.9.5"
+  }
+}

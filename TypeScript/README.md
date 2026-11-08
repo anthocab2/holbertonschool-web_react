@@ -10,11 +10,12 @@ las configuraciones disponibles. La tarea 0 y las configuraciones comunes
 proceden del ZIP recibido; las tareas 1–11 se prepararon a partir de los
 [enunciados históricos enlazados en el encargo](https://raw.githubusercontent.com/cherelemma/alx-backend-javascript/42e2b6584bd61d8cdc21cfb47147b1f8b5a3907b/0x04-TypeScript/README.md).
 
-**Pendiente de confirmar con la edición actual:** el enunciado y el
-`package.json` específico de la tarea 9, y si el módulo termina en la tarea 11.
-Por ese motivo, `task_4` incluye el código y una compilación local auxiliar,
-pero no un `package.json` presentado como oficial. Esta entrega no está
-certificada contra el checker privado de Holberton.
+**Tarea 9:** el usuario confirmó que el enunciado oficial actual exige
+`package.json`, pero no proporciona su contenido. `task_4` incluye una
+configuración local mínima con TypeScript 4.9.5, scripts de comprobación y
+compilación, y un lock para instalaciones reproducibles. Esta configuración
+no se presenta como un archivo oficial. El alcance auditado comprende las
+tareas 0–11; no se afirma aprobación del checker privado de Holberton.
 
 ## Estructura
 
@@ -68,22 +69,24 @@ ubicación de cada estudiante. Usa un servidor a la vez, porque las
 configuraciones comparten el puerto 8080. También puedes abrir
 `dist/index.html` después de compilar.
 
-## Ejecución provisional de task_4
+## Instalación y ejecución de task_4
 
-Instala primero las dependencias de `task_0`. Desde `TypeScript/task_4`:
+Desde `TypeScript/task_4`, con sus propias dependencias:
 
 ```sh
-node ../task_0/node_modules/typescript/bin/tsc --noEmit -p tsconfig.json
-node build.cjs ../task_0/node_modules/typescript
+npm ci
+npm run typecheck
+npm run build
 node dist/main.js
 ```
 
-`build.cjs` es una utilidad local de esta entrega. Comprueba los seis archivos
+`npm run build` utiliza el `build.cjs` existente. Comprueba los seis archivos
 TypeScript, conserva las opciones estrictas y reúne el JavaScript de las
 declaraciones del namespace y de `main.ts` en un mismo ámbito de ejecución.
 Las referencias de tipos por sí solas no cargan las clases en ejecución;
 véase la [documentación oficial de namespaces](https://www.typescriptlang.org/docs/handbook/namespaces.html).
-La utilidad no sustituye la configuración que falta de la tarea 9.
+La configuración local fija TypeScript 4.9.5 y no necesita Webpack ni las
+dependencias de `task_0`. Los archivos TypeScript y `tsconfig.json` se conservan.
 
 La demostración exporta `cpp`, `java`, `react` y `cTeacher`. El profesor tiene
 experiencia en C++; las materias Java y React indican que no hay profesor
